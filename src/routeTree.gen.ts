@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as FormsRouteImport } from './routes/forms'
+import { Route as FinancialInstitutionsRouteImport } from './routes/financial-institutions'
+import { Route as EuropeanUnionRouteImport } from './routes/european-union'
+import { Route as AseanRouteImport } from './routes/asean'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormsRoute = FormsRouteImport.update({
+  id: '/forms',
+  path: '/forms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinancialInstitutionsRoute = FinancialInstitutionsRouteImport.update({
+  id: '/financial-institutions',
+  path: '/financial-institutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EuropeanUnionRoute = EuropeanUnionRouteImport.update({
+  id: '/european-union',
+  path: '/european-union',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AseanRoute = AseanRouteImport.update({
+  id: '/asean',
+  path: '/asean',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/asean': typeof AseanRoute
+  '/european-union': typeof EuropeanUnionRoute
+  '/financial-institutions': typeof FinancialInstitutionsRoute
+  '/forms': typeof FormsRoute
+  '/help': typeof HelpRoute
+  '/quiz': typeof QuizRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/asean': typeof AseanRoute
+  '/european-union': typeof EuropeanUnionRoute
+  '/financial-institutions': typeof FinancialInstitutionsRoute
+  '/forms': typeof FormsRoute
+  '/help': typeof HelpRoute
+  '/quiz': typeof QuizRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/asean': typeof AseanRoute
+  '/european-union': typeof EuropeanUnionRoute
+  '/financial-institutions': typeof FinancialInstitutionsRoute
+  '/forms': typeof FormsRoute
+  '/help': typeof HelpRoute
+  '/quiz': typeof QuizRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/asean'
+    | '/european-union'
+    | '/financial-institutions'
+    | '/forms'
+    | '/help'
+    | '/quiz'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/asean'
+    | '/european-union'
+    | '/financial-institutions'
+    | '/forms'
+    | '/help'
+    | '/quiz'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/asean'
+    | '/european-union'
+    | '/financial-institutions'
+    | '/forms'
+    | '/help'
+    | '/quiz'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AseanRoute: typeof AseanRoute
+  EuropeanUnionRoute: typeof EuropeanUnionRoute
+  FinancialInstitutionsRoute: typeof FinancialInstitutionsRoute
+  FormsRoute: typeof FormsRoute
+  HelpRoute: typeof HelpRoute
+  QuizRoute: typeof QuizRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forms': {
+      id: '/forms'
+      path: '/forms'
+      fullPath: '/forms'
+      preLoaderRoute: typeof FormsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/financial-institutions': {
+      id: '/financial-institutions'
+      path: '/financial-institutions'
+      fullPath: '/financial-institutions'
+      preLoaderRoute: typeof FinancialInstitutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/european-union': {
+      id: '/european-union'
+      path: '/european-union'
+      fullPath: '/european-union'
+      preLoaderRoute: typeof EuropeanUnionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/asean': {
+      id: '/asean'
+      path: '/asean'
+      fullPath: '/asean'
+      preLoaderRoute: typeof AseanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +197,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AseanRoute: AseanRoute,
+  EuropeanUnionRoute: EuropeanUnionRoute,
+  FinancialInstitutionsRoute: FinancialInstitutionsRoute,
+  FormsRoute: FormsRoute,
+  HelpRoute: HelpRoute,
+  QuizRoute: QuizRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
