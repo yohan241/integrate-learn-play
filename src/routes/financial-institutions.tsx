@@ -65,7 +65,7 @@ function FIPage() {
             </aside>
           </div>
 
-          <YouTubeEmbed id="BIv-2A4lAJE" title="What does the World Bank do?" caption="Inside the work of the World Bank Group." />
+          <YouTubeEmbed id="iEw0z7d1kS8" title="Poverty, Prosperity and Planet: Where We Stand and How To Move the Dial" caption="World Bank Group context on poverty reduction and shared prosperity." />
 
           <h3 className="font-serif text-2xl mt-4">The five World Bank organizations</h3>
           <div className="mt-6 grid md:grid-cols-2 gap-6">
@@ -94,7 +94,7 @@ function FIPage() {
             system of exchange rates and international payments.
           </p>
 
-          <YouTubeEmbed id="j_pdHt2P3o" title="The IMF explained" caption="How the International Monetary Fund operates." />
+          <YouTubeEmbed id="bnagSbIX2E8" title="What is IMF and why does it matter?" caption="An accessible explainer on the International Monetary Fund's role." />
 
           <h3 className="font-serif text-2xl mt-4">Mission of the IMF</h3>
           <div className="mt-6 grid md:grid-cols-3 gap-6">

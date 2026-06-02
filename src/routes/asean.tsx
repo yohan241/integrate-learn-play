@@ -84,7 +84,7 @@ function ASEANPage() {
           </aside>
         </section>
 
-        <YouTubeEmbed id="6Lvi_FRT24A" title="ASEAN explained" caption="Overview of the Association of Southeast Asian Nations." />
+        <YouTubeEmbed id="WAnfj8v5acM" title="ASEAN explained in 5 minutes" caption="A concise overview of the Association of Southeast Asian Nations." />
 
         <section>
           <p className="eyebrow">Section 3.2</p>

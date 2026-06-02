@@ -40,7 +40,7 @@ function EUPage() {
         lede="The world's most ambitious experiment in economic integration — built treaty by treaty over more than half a century."
       />
       <div className="container-prose py-16 space-y-20">
-        <YouTubeEmbed id="O37yJBFRrfg" title="What is the European Union?" caption="A primer on how and why the EU was formed." />
+        <YouTubeEmbed id="SFeB9fMGJ9k" title="What is the European Union?" caption="A primer on how the EU works as a regional union." />
 
         <section>
           <p className="eyebrow">Section 2.1</p>

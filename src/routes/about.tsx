@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — The Market Integration Team" },
+      { title: "About - The Market Integration Team" },
       { name: "description", content: "About the project and the team behind this Market Integration study companion." },
       { property: "og:title", content: "About the Team" },
     ],
@@ -12,20 +12,29 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
+const teamMembers = [
+  { name: "Johan Czar P. Pagba", initials: "JP" },
+  { name: "John Rich A. Alaya-ay", initials: "JA" },
+  { name: "Dianna Jane Elizabeth Pacatang", initials: "DP" },
+  { name: "Matthew David L. Cartagena", initials: "MC" },
+  { name: "Carl Justin C. Peralta", initials: "CP" },
+  { name: "Mellissa T. Ambeguia", initials: "MA" },
+];
+
 function AboutPage() {
   return (
     <article>
       <PageHeader
         eyebrow="Colophon"
         title="About this project"
-        lede="A formal, editorial walkthrough of market integration — designed as a study companion for students, instructors and curious readers."
+        lede="A formal, editorial walkthrough of market integration - designed as a study companion for students, instructors and curious readers."
       />
       <div className="container-prose py-16 grid lg:grid-cols-3 gap-12">
         <div className="lg:col-span-2 space-y-6 text-foreground/85 leading-relaxed">
           <p>
-            This site organizes the source material — a presentation on market integration covering the
+            This site organizes the source material - a presentation on market integration covering the
             five forms of integration, the European Union, ASEAN, the World Bank, and the International
-            Monetary Fund — into a quiet, readable digital companion.
+            Monetary Fund - into a quiet, readable digital companion.
           </p>
           <p>
             The intent is not to replace the underlying text but to present it well: navigable, paced, and
@@ -33,17 +42,15 @@ function AboutPage() {
             passive reading into recall practice.
           </p>
           <h2 className="font-serif text-3xl pt-6">The team</h2>
-          <p className="text-muted-foreground italic">
-            Team members will be listed here. Share the names (and any short bios or roles) with us and we'll
-            place them in this section as cards.
-          </p>
           <div className="grid sm:grid-cols-2 gap-4 mt-4">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="ink-card p-5 flex items-center gap-4">
-                <div className="h-14 w-14 rounded-full navy-panel grid place-items-center font-serif text-xl">?</div>
+            {teamMembers.map((member) => (
+              <div key={member.name} className="ink-card p-5 flex items-center gap-4">
+                <div className="h-14 w-14 rounded-full navy-panel grid place-items-center font-serif text-xl">
+                  {member.initials}
+                </div>
                 <div>
-                  <p className="font-serif text-lg">Team Member {i}</p>
-                  <p className="text-xs text-muted-foreground">Role — to be provided</p>
+                  <p className="font-serif text-lg">{member.name}</p>
+                  <p className="text-xs text-muted-foreground">Project team member</p>
                 </div>
               </div>
             ))}
