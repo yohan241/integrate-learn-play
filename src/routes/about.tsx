@@ -19,6 +19,7 @@ const teamMembers = [
   { name: "Matthew David L. Cartagena", initials: "MC" },
   { name: "Carl Justin C. Peralta", initials: "CP" },
   { name: "Mellissa T. Ambeguia", initials: "MA" },
+  { name: "Glen Mc Arnie J. Morta", initials: "GM" },
 ];
 
 function AboutPage() {
